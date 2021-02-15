@@ -1,3 +1,9 @@
+//***********************************
+// ArrowController.cs
+// - Morgan Ethier
+// - Created for GAME3002_A1
+// - Controller script for aiming arrow
+//***********************************
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,6 +70,7 @@ public class ArrowController : MonoBehaviour
                 angleVert += 0.1f;
             }
 
+            // Prevent arrow from moving further than ball is able to
             if (angleVert > 0.0f)
             {
                 angleVert = 0.0f;
@@ -73,20 +80,30 @@ public class ArrowController : MonoBehaviour
                 angleVert = -0.5f;
             }
 
+            if (angleHoriz > 0.5f)
+            {        
+                angleHoriz = 0.5f;
+            }        
+            if (angleHoriz < -0.5f)
+            {        
+                angleHoriz = -0.5f;
+            }
+
             if (Input.GetKeyDown("space"))
             {
                 isActivated = true;
             }
 
+            //Update position of arrow
             transform.position = new Vector3(posHoriz, 1, -14.5f);
             transform.rotation = new Quaternion(angleVert, angleHoriz, 0.0f, 1);
         }
-        else
+        else //if arrow not active, teleport out of range
         {
             transform.position = new Vector3(0, -10, 0);
         }
 
-        // Reset
+        // Reset arrow position
         if (Input.GetKeyDown("r"))
         {
             Reset();
@@ -94,7 +111,7 @@ public class ArrowController : MonoBehaviour
 
     }
 
-    // Reset
+    // Resets arrow position
     void Reset()
     {
         //Default position
