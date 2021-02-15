@@ -2077,7 +2077,7 @@ SphereCollider:
   m_GameObject: {fileID: 1190612303}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -2157,6 +2157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posHoriz: 0
+  posVert: 0
+  posDepth: 0
   angleDegVert: 0
   angleDegHoriz: 0
   isActivated: 0
@@ -2755,6 +2757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1716370193}
+  - component: {fileID: 1716370194}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -2778,6 +2781,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716370194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716370192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38556192cc2a3fc41a979d180005ded6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angleHoriz: 0
+  angleVert: 0
+  posHoriz: 0
+  isActivated: 0
 --- !u!1 &1744351029
 GameObject:
   m_ObjectHideFlags: 0
