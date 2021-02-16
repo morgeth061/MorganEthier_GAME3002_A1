@@ -1746,7 +1746,9 @@ MonoBehaviour:
     Press w/s to aim up/down
 
     Press
-    space to shoot
+    q/e to aim left/right
+
+    Press space to shoot
 
     Press r to reset'
 --- !u!222 &1016692680
